@@ -16,5 +16,4 @@ import org.springframework.stereotype.Component;
 public class ConfigBean {
     private String name;
     private String age;
-
 }
