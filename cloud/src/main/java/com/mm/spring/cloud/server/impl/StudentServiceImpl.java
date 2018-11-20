@@ -7,6 +7,7 @@ import com.mm.spring.cloud.mapper.StudentMapper;
 import com.mm.spring.cloud.server.IStudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tk.mybatis.mapper.entity.Example;
 
 /**
  * @Auther: wang.meng
@@ -26,21 +27,27 @@ public class StudentServiceImpl implements IStudentService {
 
     @Override
     public DataBase deleteStudentByName(String name) {
-        return Result.OK(studentMapper.deleteStudentByName(name));
+        Example example = new Example(Student.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("name", name);
+        return Result.OK(studentMapper.deleteByExample(example));
     }
 
     @Override
     public DataBase deleteAll() {
-        return Result.OK(studentMapper.deleteAll());
+        Example example = new Example(Student.class);
+        return Result.OK(studentMapper.deleteByExample(example));
     }
 
     @Override
     public DataBase queryStudentByName(String name) {
-        return Result.OK(studentMapper.queryStudentByName(name));
+        Student student = new Student();
+        student.setName(name);
+        return Result.OK(studentMapper.selectOne(student));
     }
 
     @Override
     public DataBase queryAllStudent() {
-        return Result.OK(studentMapper.queryAllStudent());
+        return Result.OK(studentMapper.selectAll());
     }
 }

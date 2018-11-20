@@ -2,10 +2,12 @@ package com.mm.spring.cloud.bean;
 
 import javax.persistence.*;
 
+@Table(name = "`classes`")
 public class Classes {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "`id`")
     private Long id;
 
+    @Column(name = "`classes`")
     private String classes;
 
     /**
