@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mm.spring.cloud.mapper.ClassesMapper">
+    <resultMap id="BaseResultMap" type="com.mm.spring.cloud.bean.Classes">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <result column="id" jdbcType="BIGINT" property="id"/>
+        <result column="classes" jdbcType="VARCHAR" property="classes"/>
+    </resultMap>
+</mapper>

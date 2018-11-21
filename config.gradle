@@ -5,8 +5,7 @@ allprojects {
 }
 
 ext {
-    springBootVersion = '2.1.0.RELEASE'
-    springCloudVersion = 'Finchley.BUILD-SNAPSHOT'
+    springCloudVersion = 'Finchley.RELEASE'
 
     dependVersion = [
             lombok                           :'1.18.2',

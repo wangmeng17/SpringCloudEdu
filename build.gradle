@@ -4,9 +4,9 @@ version '1.0-SNAPSHOT'
 apply plugin: 'idea'
 apply from: 'config.gradle'
 
-buildscript {
+/*buildscript {
     ext {
-        springBootVersion = '2.1.0.RELEASE'
+        springBootVersion = '2.0.3.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -14,7 +14,7 @@ buildscript {
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
-}
+}*/
 
 subprojects {
 
@@ -27,7 +27,7 @@ subprojects {
 
     buildscript {
         ext {
-            springBootVersion = '2.1.0.RELEASE'
+            springBootVersion = '2.0.3.RELEASE'
         }
         repositories {
             mavenCentral()
@@ -37,8 +37,8 @@ subprojects {
         }
     }
 
-    sourceCompatibility = 10
-    targetCompatibility = 10
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
     tasks.withType(JavaCompile) {
         options.encoding = 'UTF-8'
     }
@@ -57,13 +57,13 @@ subprojects {
     dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
 
-        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: rootProject.ext.springBootVersion
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: springBootVersion
         compile group: 'org.projectlombok', name: 'lombok', version: rootProject.ext.dependVersion["lombok"]
-        compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: rootProject.ext.springBootVersion
-        compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: rootProject.ext.springBootVersion
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: springBootVersion
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: springBootVersion
         compile group: 'io.springfox', name: 'springfox-swagger2', version: rootProject.ext.dependVersion["swagger2"]
         compile group: 'io.springfox', name: 'springfox-swagger-ui', version: rootProject.ext.dependVersion["swagger2"]
-        compile group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: rootProject.ext.springBootVersion
+        compile group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: springBootVersion
         compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: rootProject.ext.dependVersion["mybatis_spring_boot_starter"]
         compile group: 'tk.mybatis', name: 'mapper-spring-boot-starter', version: rootProject.ext.dependVersion["mapper_spring_boot_starter"]
         compile(group: 'mysql', name: 'mysql-connector-java', version: rootProject.ext.dependVersion["mysql_connector_java"]) {
@@ -71,7 +71,7 @@ subprojects {
         }
         compile group: 'com.alibaba', name: 'druid', version: rootProject.ext.dependVersion["druid"]
         compile group: 'com.google.code.gson', name: 'gson', version: rootProject.ext.dependVersion["gson"]
-        testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: rootProject.ext.springBootVersion
+        testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootVersion
     }
 
 }

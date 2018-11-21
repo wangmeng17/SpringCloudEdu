@@ -1,0 +1,5 @@
+archivesBaseName = 'eureka-server'
+
+dependencies{
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-server'
+}
