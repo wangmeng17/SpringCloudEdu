@@ -4,7 +4,7 @@ version '1.0-SNAPSHOT'
 apply plugin: 'idea'
 apply from: 'config.gradle'
 
-/*buildscript {
+buildscript {
     ext {
         springBootVersion = '2.0.3.RELEASE'
     }
@@ -14,7 +14,7 @@ apply from: 'config.gradle'
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
-}*/
+}
 
 subprojects {
 

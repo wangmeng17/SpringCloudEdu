@@ -1,4 +1,5 @@
 rootProject.name = 'parent'
 include 'cloud'
 include 'eureka-server'
+include 'eureka-client1'
 
