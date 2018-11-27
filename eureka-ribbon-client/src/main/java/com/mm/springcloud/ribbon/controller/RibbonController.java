@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Description:
  */
 @RestController()
-@RequestMapping("ribbon")
+@RequestMapping("/ribbon")
 public class RibbonController {
 
     @Autowired

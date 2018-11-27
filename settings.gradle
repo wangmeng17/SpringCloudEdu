@@ -5,4 +5,5 @@ include 'eureka-client1'
 include 'eureka-ribbon-client'
 include 'eureka-feign-client'
 include 'eureka-monitor-client'
+include 'eureka-zuul-client'
 
