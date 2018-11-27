@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @Date: 2018/11/22  16:40
  * @Description:
  */
-@FeignClient(value = "eureka-client1", configuration = FeignConfig.class)
+@FeignClient(value = "eureka-client1", configuration = FeignConfig.class, fallback = FeignScheduleServiceError.class)
 public interface IFeignScheduleService {
 
     @GetMapping(value = "/eurekaclient1")

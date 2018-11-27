@@ -1,6 +1,8 @@
 archivesBaseName = 'eureka-ribbon-client'
 
 dependencies{
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client'
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-ribbon'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.0.2.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-ribbon', version: '2.0.2.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-hystrix', version: '2.0.2.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-hystrix-dashboard', version: '2.0.2.RELEASE'
 }
