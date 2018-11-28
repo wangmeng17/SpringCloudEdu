@@ -6,4 +6,6 @@ include 'eureka-ribbon-client'
 include 'eureka-feign-client'
 include 'eureka-monitor-client'
 include 'eureka-zuul-client'
+include 'config-server'
+include 'config-client'
 
