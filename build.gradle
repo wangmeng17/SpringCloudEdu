@@ -23,7 +23,6 @@ subprojects {
     apply plugin: 'idea'
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
-    
 
     buildscript {
         ext {
@@ -72,6 +71,7 @@ subprojects {
         compile group: 'com.alibaba', name: 'druid', version: rootProject.ext.dependVersion["druid"]
         compile group: 'com.google.code.gson', name: 'gson', version: rootProject.ext.dependVersion["gson"]
         testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootVersion
-    }
 
+        compile (group: 'org.springframework.cloud', name: 'spring-cloud-starter-zipkin', version: '2.0.2.RELEASE')
+    }
 }

@@ -1,0 +1,14 @@
+archivesBaseName = 'zipkin-server'
+
+dependencies{
+    compile (group: 'io.zipkin.java', name: 'zipkin-server', version: '2.11.8') {
+        exclude group: 'org.apache.logging.log4j'
+    }
+    compile (group: 'io.zipkin.java', name: 'zipkin-autoconfigure-ui', version: '2.11.8') {
+        exclude group: 'org.apache.logging.log4j'
+    }
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.0.2.RELEASE'
+}
+configurations {
+    //all*.exclude group: 'ch.qos.logback',module:'logback-classic'
+}
