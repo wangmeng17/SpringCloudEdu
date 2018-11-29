@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * @Date: 2018/11/21  17:17
  * @Description:
  */
-@SpringBootApplication()
+@SpringBootApplication
 @EnableEurekaClient
 public class EurekaClient1Application {
     public static void main(String[] args) {

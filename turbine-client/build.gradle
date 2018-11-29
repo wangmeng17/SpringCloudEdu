@@ -1,8 +1,7 @@
-archivesBaseName = 'eureka-monitor-client'
+archivesBaseName = 'turbine-client'
 
 dependencies{
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-turbine', version: '2.0.2.RELEASE'
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-netflix-turbine', version: '2.0.2.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-turbine', version: '2.0.2.RELEASE'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-hystrix', version: '2.0.2.RELEASE'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-hystrix-dashboard', version: '2.0.2.RELEASE'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.0.2.RELEASE'
