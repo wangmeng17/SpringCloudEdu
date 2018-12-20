@@ -11,4 +11,5 @@ include 'config-client'
 include 'zipkin-server'
 include 'admin-server'
 include 'security'
+include 'auth-service'
 

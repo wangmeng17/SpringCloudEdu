@@ -68,7 +68,7 @@ subprojects {
         compile(group: 'mysql', name: 'mysql-connector-java', version: rootProject.ext.dependVersion["mysql_connector_java"]) {
             exclude(module: 'protobuf-java')
         }
-        compile group: 'com.alibaba', name: 'druid', version: rootProject.ext.dependVersion["druid"]
+        compile group: 'com.alibaba', name: 'druid-spring-boot-starter', version: rootProject.ext.dependVersion["druid"]
         compile group: 'com.google.code.gson', name: 'gson', version: rootProject.ext.dependVersion["gson"]
         testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootVersion
 
