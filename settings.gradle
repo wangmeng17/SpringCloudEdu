@@ -12,4 +12,6 @@ include 'zipkin-server'
 include 'admin-server'
 include 'security'
 include 'auth-service'
+include 'auth-jwt-server'
+include 'auth-jwt-user'
 
