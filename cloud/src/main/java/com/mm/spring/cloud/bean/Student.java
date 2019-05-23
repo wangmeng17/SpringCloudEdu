@@ -20,6 +20,14 @@ public class Student {
     @Column(name = "`age`")
     private Byte age;
 
+    public Student() {
+    }
+
+    public Student(String name, Byte age) {
+        this.name = name;
+        this.age = age;
+    }
+
     /**
      * @return id
      */
